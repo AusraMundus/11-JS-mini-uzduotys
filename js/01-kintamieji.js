@@ -115,15 +115,24 @@ console.log(`${pirmas3} - ${antras3} + ${trecias3} - ${ketvirtas3} + ${penktas3}
 //const furnitures = ['stalas', 'kede', 'sofa', 'spinta', 'lova'];
 //const flowers = ['tulip', 'lily', 'dandelion', 'rose', 'narcissus'];
 
-console.log(animalsSounds.reverse(animalsSounds));
-console.log(furnitures.reverse(furnitures));
-console.log(flowers.reverse(flowers));
+console.log(animalsSounds[4], animalsSounds[3], animalsSounds[2], animalsSounds[1], animalsSounds[0]);
+console.log(furnitures[4], furnitures[3], furnitures[2], furnitures[1], furnitures[0]);
+console.log(flowers[4], flowers[3], flowers[2], flowers[1], flowers[0]);
+
+//console.log(animalsSounds.reverse(animalsSounds));
+//console.log(furnitures.reverse(furnitures));
+//console.log(flowers.reverse(flowers));
+
+
+console.log('-----------------------------');
+
 
 // Kintamuju palyginimas
 
 /* 
 Lyginant, jei rezultatas tenkina palyginimo sąlygą, tai į console išvesti žodį “Pomidoras”, o jei
 sąlyga nėra tenkinama, išvesti sakinį “Bandykite kitą kartą.”.
+
 1. Tarpusavyje palyginti skaičiaus tipo kintamuosius:
     a. kuris didesnis
     b. kuris mažesnis
@@ -131,16 +140,60 @@ sąlyga nėra tenkinama, išvesti sakinį “Bandykite kitą kartą.”.
     d. ar jie nelygūs
     e. kuris didesnis arba lygus
     f. kuris mažesnis arba lygus
+*/
+
+const a = 8;
+const b = 3;
+
+if (a > b) {
+    console.log('Pomidoras');
+} else {
+    console.log('Bandykite kitą kartą.');
+}
+
+if (a < b) {
+    console.log('Pomidoras');
+} else {
+    console.log('Bandykite dar kartą.');
+}
+
+if (a === b) {
+    console.log('Pomidoras');
+} else {
+    console.log('Bandykite dar kartą.');
+}
+
+if (a !== b) {
+    console.log('Pomidoras');
+} else {
+    console.log('Bandykite dar kartą.');
+}
+
+if (a >= b) {
+    console.log('Pomidoras');
+} else {
+    console.log('Bandykite dar kartą.');
+}
+
+if (a <= b) {
+    console.log('Pomidoras');
+} else {
+    console.log('Bandykite dar kartą.');
+}
+
+
+/* 
 2. Išvesti teksto tipo kintamųjų ilgius
-    3. Tarpusavyje palyginti teksto tipo kintamųjų ilgius:
-    a. kuris didesnis
-    b. kuris mažesnis
-    c. ar jie lygūs
-    d. ar jie nelygūs
-    e. kuris didesnis arba lygus
-    f. kuris mažesnis arba lygus
-4. Išvesti sąrašo tipo kintamųjų ilgius
-    5. Tarpusavyje palyginti sąrašo tipo kintamųjų ilgius:
+*/
+
+const tekstas1 = 'Lova';
+const tekstas2 = 'Spinta';
+
+console.log('Teksto 1 ilgis:', tekstas1.length);
+console.log('Teksto 2 ilgis:', tekstas2.length);
+
+/* 
+3. Tarpusavyje palyginti teksto tipo kintamųjų ilgius:
     a. kuris didesnis
     b. kuris mažesnis
     c. ar jie lygūs
@@ -148,3 +201,95 @@ sąlyga nėra tenkinama, išvesti sakinį “Bandykite kitą kartą.”.
     e. kuris didesnis arba lygus
     f. kuris mažesnis arba lygus
 */
+
+if (tekstas1.length > tekstas2.length) {
+    console.log('Pomidoras');
+} else {
+    console.log('Bandykite dar kartą.');
+}
+
+if (tekstas1.length < tekstas2.length) {
+    console.log('Pomidoras');
+} else {
+    console.log('Bandykite dar kartą.');
+}
+
+if (tekstas1.length === tekstas2.length) {
+    console.log('Pomidoras');
+} else {
+    console.log('Bandykite dar kartą.');
+}
+
+if (tekstas1.length !== tekstas2.length) {
+    console.log('Pomidoras');
+} else {
+    console.log('Bandykite dar kartą.');
+}
+
+if (tekstas1.length >= tekstas2.length) {
+    console.log('Pomidoras');
+} else {
+    console.log('Bandykite dar kartą.');
+}
+
+if (tekstas1.length <= tekstas2.length) {
+    console.log('Pomidoras');
+} else {
+    console.log('Bandykite dar kartą.');
+}
+
+/* 
+4. Išvesti sąrašo tipo kintamųjų ilgius
+*/
+
+const sarasas1 = ['vienas', 'du', 'trys'];
+const sarasas2 = ['keturi', 'penki', 'sesi'];
+
+console.log('Saraso 1 ilgis:', sarasas1.length);
+console.log('Saraso 2 ilgis:', sarasas2.length);
+
+/* 
+5. Tarpusavyje palyginti sąrašo tipo kintamųjų ilgius:
+    a. kuris didesnis
+    b. kuris mažesnis
+    c. ar jie lygūs
+    d. ar jie nelygūs
+    e. kuris didesnis arba lygus
+    f. kuris mažesnis arba lygus
+*/
+
+if (sarasas1.length > sarasas2.length) {
+    console.log('Pomidoras');
+} else {
+    console.log('Bandykite dar kartą.');
+}
+
+if (sarasas1.length < sarasas2.length) {
+    console.log('Pomidoras');
+} else {
+    console.log('Bandykite dar kartą.');
+}
+
+if (sarasas1.length === sarasas2.length) {
+    console.log('Pomidoras');
+} else {
+    console.log('Bandykite dar kartą.');
+}
+
+if (sarasas1.length !== sarasas2.length) {
+    console.log('Pomidoras');
+} else {
+    console.log('Bandykite dar kartą.');
+}
+
+if (sarasas1.length >= sarasas2.length) {
+    console.log('Pomidoras');
+} else {
+    console.log('Bandykite dar kartą.');
+}
+
+if (sarasas1.length <= sarasas2.length) {
+    console.log('Pomidoras');
+} else {
+    console.log('Bandykite dar kartą.');
+}
