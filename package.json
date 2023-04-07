@@ -1,0 +1,19 @@
+{
+  "name": "js-mini-uzduotys",
+  "version": "1.0.0",
+  "description": "JS mini uzduotys",
+  "main": "index.js",
+  "scripts": {
+    "ciklas": "nodemon ./js/03-ciklas.js",
+    "funkcijos": "nodemon ./js/02-funkcijos.js",
+    "kintamieji": "nodemon ./js/01-kintamieji.js",
+    "dev": "nodemon",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Ausra <munduswebstudio@gmail.com> (https://github.com/AusraMundus)",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
