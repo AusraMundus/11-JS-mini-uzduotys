@@ -9,6 +9,8 @@ console.clear();
 a. Po kiekvieno jų inicijavimo, išvesti į console
 */
 
+console.log('--1.--')
+
 const skaicius1 = 15;
 const skaicius2 = 2;
 const skaicius3 = 109;
@@ -20,6 +22,8 @@ console.log(skaicius3);
 2. Sukurti 3 kintamuosius su teksto tipo reikšmėmis
 a. Po kiekvieno jų inicijavimo, išvesti į console
 */
+
+console.log('--2.--')
 
 const word1 = 'Jonukas';
 const word2 = 'yra';
@@ -33,6 +37,8 @@ console.log(word3);
 a. Po kiekvieno jų inicijavimo, išvesti į console
 */
 
+console.log('--3.--')
+
 const numbers1 = [1, 5, 9, 11, 15];
 const numbers2 = [2, 4, 8, 56, 89];
 const numbers3 = [-56, 85, -2, 0.53, 58];
@@ -44,6 +50,8 @@ console.log(numbers3);
 4. Sukurti 3 sąrašo tipo kintamuosius su penkiomis teksto tipo reikšmėmis
 a. Po kiekvieno jų inicijavimo, išvesti į console
 */
+
+console.log('--4.--')
 
 const animalsSounds = ['miau', 'mu', 'au', 'chip', 'be'];
 const furnitures = ['stalas', 'kede', 'sofa', 'spinta', 'lova'];
@@ -63,12 +71,16 @@ console.log('-----------------------------');
 a. Rezultatą išvesti į console
 */
 
+console.log('--1.--')
+
 console.log(skaicius1 + skaicius2 + skaicius3);
 
 /*  
 2. Sujungti visus teksto tipo kintamuosius taip, jog tarp jų būtų sudarytas tarpas
 a. Rezultatą išvesti į console
 */
+
+console.log('--2.--')
 
 console.log(word1 + ' ' + word2 +  ' '  + word3);
 
@@ -77,6 +89,8 @@ console.log(word1 + ' ' + word2 +  ' '  + word3);
 1-2+3-4+5
 a. Rezultatą išvesti į console
 */
+
+console.log('--3.--')
 
 // const numbers1 = [1, 5, 9, 11, 15];
 const pirmas1 = numbers1[0];
@@ -111,6 +125,8 @@ console.log(`${pirmas3} - ${antras3} + ${trecias3} - ${ketvirtas3} + ${penktas3}
 4. Sujungti sąrašų vertes, kurių tipas yra tekstai, nuo sąrašo galo iki pradžios taip, jog tarp jų būtų kablelis ir tarpas
 */
 
+console.log('--4.--')
+
 //const animalsSounds = ['miau', 'mu', 'au', 'chip', 'be'];
 //const furnitures = ['stalas', 'kede', 'sofa', 'spinta', 'lova'];
 //const flowers = ['tulip', 'lily', 'dandelion', 'rose', 'narcissus'];
@@ -141,6 +157,8 @@ sąlyga nėra tenkinama, išvesti sakinį “Bandykite kitą kartą.”.
     e. kuris didesnis arba lygus
     f. kuris mažesnis arba lygus
 */
+
+console.log('--1.--')
 
 const a = 8;
 const b = 3;
@@ -186,6 +204,8 @@ if (a <= b) {
 2. Išvesti teksto tipo kintamųjų ilgius
 */
 
+console.log('--2.--')
+
 const tekstas1 = 'Lova';
 const tekstas2 = 'Spinta';
 
@@ -201,6 +221,8 @@ console.log('Teksto 2 ilgis:', tekstas2.length);
     e. kuris didesnis arba lygus
     f. kuris mažesnis arba lygus
 */
+
+console.log('--3.--')
 
 if (tekstas1.length > tekstas2.length) {
     console.log('Pomidoras');
@@ -242,6 +264,8 @@ if (tekstas1.length <= tekstas2.length) {
 4. Išvesti sąrašo tipo kintamųjų ilgius
 */
 
+console.log('--4.--')
+
 const sarasas1 = ['vienas', 'du', 'trys'];
 const sarasas2 = ['keturi', 'penki', 'sesi'];
 
@@ -257,6 +281,8 @@ console.log('Saraso 2 ilgis:', sarasas2.length);
     e. kuris didesnis arba lygus
     f. kuris mažesnis arba lygus
 */
+
+console.log('--5.--')
 
 if (sarasas1.length > sarasas2.length) {
     console.log('Pomidoras');
