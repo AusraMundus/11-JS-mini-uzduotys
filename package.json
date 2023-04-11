@@ -4,10 +4,11 @@
   "description": "JS mini uzduotys",
   "main": "index.js",
   "scripts": {
+    "funkcijos-5": "nodemon ./js/funkcijos-5.js",
     "codewars": "nodemon ./js/codewars.js",
-    "ciklas": "nodemon ./js/03-ciklas.js",
-    "funkcijos": "nodemon ./js/02-funkcijos.js",
-    "kintamieji": "nodemon ./js/01-kintamieji.js",
+    "ciklas": "nodemon ./js/ciklas.js",
+    "funkcijos-1234": "nodemon ./js/funkcijos-1234.js",
+    "kintamieji": "nodemon ./js/kintamieji.js",
     "dev": "nodemon",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
