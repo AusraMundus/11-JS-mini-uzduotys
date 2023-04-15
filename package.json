@@ -4,6 +4,7 @@
   "description": "JS mini uzduotys",
   "main": "index.js",
   "scripts": {
+    "funkcijos-6": "nodemon ./js/funkcijos-6.js",
     "funkcijos-5": "nodemon ./js/funkcijos-5.js",
     "codewars": "nodemon ./js/codewars.js",
     "ciklas": "nodemon ./js/ciklas.js",
