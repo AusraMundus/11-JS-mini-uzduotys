@@ -305,3 +305,63 @@ console.log(getDrinkByProfession('Pug'));               // OK
 
 console.log('--------------------------------')
 
+/*
+Very simple, given an integer or a floating-point number, find its opposite.
+
+Examples:
+
+1: -1
+14: -14
+-34: 34
+*/
+
+function opposite(number) {
+  let oppositeNumber = -number;
+  return oppositeNumber;
+}
+
+console.log(opposite(2));
+console.log(opposite(-56.2));
+console.log(opposite(0));
+
+console.log('--------------------------------')
+
+/*
+Objective
+Given two integer arrays a, b, both of length >= 1, create a program that returns true if the sum of the squares of each element in a is strictly greater than the sum of the cubes of each element in b.
+
+E.g.
+
+arrayMadness([4, 5, 6], [1, 2, 3]); // returns true since 4 ** 2 + 5 ** 2 + 6 ** 2 > 1 ** 3 + 2 ** 3 + 3 ** 3
+Get your timer out. Are you ready? Ready, get set, GO!!!
+*/
+
+function arrayMadness(a, b) {
+  let reduceArrayA = a.reduce((t, n) => t + n**2, 0);
+  let reduceArrayB = b.reduce((t, n) => t + n**3, 0);
+  if (reduceArrayA > reduceArrayB) {
+    return true;
+    } else {
+    return false;
+    }
+// return reduceArrayA > reduceArrayB;
+}
+console.log(arrayMadness([4, 5, 6], [1, 2, 3]));
+console.log(arrayMadness([1,3,5,2,4],[2,2,2,2,2,2,2,1]));
+
+// su FOR
+
+function arrayMadness(a, b) {
+  let firstArray = 0;
+  let secondArray = 0;
+    for (let i = 0; i < a.length; i++) {
+      firstArray+= a[i]**2;
+    }
+    for(let i = 0; i < b.length; i++) {
+      secondArray += b[i]**3;
+    }
+    return firstArray > secondArray ? true : false; // ternary
+  }
+console.log(arrayMadness([4, 5, 6], [1, 2, 3]));
+console.log(arrayMadness([1,3,5,2,4],[2,2,2,2,2,2,2,1]));
+
