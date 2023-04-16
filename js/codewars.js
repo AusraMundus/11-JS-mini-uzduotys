@@ -365,3 +365,95 @@ function arrayMadness(a, b) {
 console.log(arrayMadness([4, 5, 6], [1, 2, 3]));
 console.log(arrayMadness([1,3,5,2,4],[2,2,2,2,2,2,2,1]));
 
+console.log('--------------------------------')
+/*
+There are 32 letters in the Polish alphabet: 9 vowels and 23 consonants.
+
+Your task is to change the letters with diacritics:
+
+ą -> a,
+ć -> c,
+ę -> e,
+ł -> l,
+ń -> n,
+ó -> o,
+ś -> s,
+ź -> z,
+ż -> z
+and print out the string without the use of the Polish letters.
+
+For example:
+
+"Jędrzej Błądziński"  -->  "Jedrzej Bladzinski"
+*/
+function correctPolishLetters (string) {
+  let stringFixed = string
+    .replaceAll('ą', 'a')
+    .replaceAll('ć', 'c')
+    .replaceAll('ę', 'e')
+    .replaceAll('ł', 'l')
+    .replaceAll('ń', 'n')
+    .replaceAll('ó', 'o')
+    .replaceAll('ś', 's')
+    .replaceAll('ź', 'z')
+    .replaceAll('ż', 'z');
+  return stringFixed;
+}
+console.log(correctPolishLetters('Jędrzej Błądziński'));
+console.log(correctPolishLetters('Lech Wałęsa'));
+console.log(correctPolishLetters('Maria Skłodowska-Curie'));
+console.log(correctPolishLetters('Władysław Reymont'));
+
+// su global
+
+function correctPolishLetters (string) {
+  return string
+  .replace(/ł/g, 'l')
+  .replace(/ą/g, 'a')
+  .replace(/ć/g, 'c')
+  .replace(/ę/g, 'e')
+  .replace(/ń/g, 'n')
+  .replace(/ó/g, 'o')
+  .replace(/ś/g, 's')
+  .replace(/ź/g, 'z')
+  .replace(/ż/g, 'z')
+}
+console.log(correctPolishLetters('Władysław Reymont'));
+
+//sudetingas su global
+
+function correctPolishLetters(string) {
+  const polishLetters = /[ąćęłńóśźż]/g; // G kodo pabaigoje rodo, kad ši reguliarioji išraiška yra visuotinė ir atitiks visus nurodytos eilutės raidžių atvejus.
+  const replacements = {
+    'ą': 'a',
+    'ć': 'c',
+    'ę': 'e',
+    'ł': 'l',
+    'ń': 'n',
+    'ó': 'o',
+    'ś': 's',
+    'ź': 'z',
+    'ż': 'z'
+  }
+  return string.replace(polishLetters, match => replacements[match]);
+}
+console.log(correctPolishLetters('Maria Skłodowska-Curie'));
+console.log(correctPolishLetters('Władysław Reymont'));
+
+console.log("----------------");
+
+/*
+You are given two interior angles (in degrees) of a triangle.
+
+Write a function to return the 3rd.
+
+Note: only positive integers will be tested.
+
+https://en.wikipedia.org/wiki/Triangle
+*/
+
+
+function otherAngle(a, b) {
+  return 180 - a - b;
+}
+console.log(otherAngle(30, 60)); // 90
