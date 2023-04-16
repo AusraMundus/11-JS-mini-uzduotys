@@ -89,10 +89,10 @@ function reverseWords(str){
 
   // kitas budas
   function reverseWords(str){
-    let splatArr = str.split(' ')
-    let reverseArr = splatArr.reverse()
-    let rejoinedArr = reverseArr.join(' ')
-    return  rejoinedArr
+    let splatArr = str.split(' ');
+    let reverseArr = splatArr.reverse();
+    let rejoinedArr = reverseArr.join(' ');
+    return  rejoinedArr;
   }
   console.log(reverseWords("hello world!"));
 
@@ -221,3 +221,87 @@ console.log(past(0,1,1));
 const past2 = (h, m, s) => (3600 * h + 60 * m + s) * 1000;
 
 console.log(past2(1,1,1)); 
+
+
+console.log('--------------------------------')
+
+/*
+You get an array of numbers, return the sum of all of the positives ones.
+
+Example [1,-4,7,12] => 1 + 7 + 12 = 20
+
+Note: if there is nothing to sum, the sum is default to 0.
+*/
+
+function positiveSum(arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) { //prasukam array reiksmes
+    if (arr[i] > 0) { // isrenkam didesnes uz nuli
+      sum += arr[i]; // sum = sum + arr[i]
+    }
+  }
+  return sum; // gauname teigiamu skaiciu suma
+}
+console.log(positiveSum([1, -4, 7, 12]));
+
+console.log('--------------------------------')
+
+/*
+Complete the function that receives as input a string, and produces outputs according to the following table:
+
+Input	                  Output
+
+"Jabroni"	              "Patron Tequila"
+"School Counselor"	    "Anything with Alcohol"
+"Programmer"	          "Hipster Craft Beer"
+"Bike Gang Member"	    "Moonshine"
+"Politician"	          "Your tax dollars"
+"Rapper"	              "Cristal"
+anything else	          "Beer"
+
+Note: anything else is the default case: if the input to the function is not any of the values in the table, then the return value should be "Beer".
+
+Make sure you cover the cases where certain words do not show up with correct capitalization. For example, the input "pOLitiCIaN" should still return "Your tax dollars".
+*/
+
+
+function getDrinkByProfession(param) {
+  param = param.toLowerCase(); // suvienodinti visas stringo raides i mazasias
+
+  switch (param) { // patikrinti visus variantus ir kai atranda tinkama, grazinti reikiama atsakyma
+    case 'jabroni':
+      return 'Patron Tequila';
+
+    case 'school counselor':
+      return 'Anything with Alcohol';
+
+    case 'programmer':
+      return 'Hipster Craft Beer';
+
+    case 'bike gang member':
+      return 'Moonshine';
+
+    case 'politician':
+      return 'Your tax dollars';
+
+    case 'rapper':
+      return 'Cristal';
+
+    default: // jei nera ne vieno tinkamo, grazinti kita atsakyma
+      return 'Beer';
+  }
+}
+
+
+console.log(getDrinkByProfession('JabrOni'));           // OK
+console.log(getDrinkByProfession('jabrOni'));           // OK
+console.log(getDrinkByProfession('scHOOl counselor'));
+console.log(getDrinkByProfession('prOgramMer'));        // OK
+console.log(getDrinkByProfession('bike ganG member'));
+console.log(getDrinkByProfession('poLiTiCian'));        // OK
+console.log(getDrinkByProfession('rapper'));            // OK
+console.log(getDrinkByProfession('pundit'));            // OK
+console.log(getDrinkByProfession('Pug'));               // OK
+
+console.log('--------------------------------')
+
