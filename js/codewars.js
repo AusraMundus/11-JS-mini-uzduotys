@@ -457,3 +457,76 @@ function otherAngle(a, b) {
   return 180 - a - b;
 }
 console.log(otherAngle(30, 60)); // 90
+
+console.log("----------------");
+
+
+/*
+Create a function that accepts a string and a single character, and returns an integer of the count of occurrences the 2nd argument is found in the first one.
+
+If no occurrences can be found, a count of 0 should be returned.
+
+("Hello", "o")  ==>  1
+("Hello", "l")  ==>  2
+("", "z")       ==>  0
+str_count("Hello", 'o'); // returns 1
+str_count("Hello", 'l'); // returns 2
+str_count("", 'z'); // returns 0
+Notes
+The first argument can be an empty string
+In languages with no distinct character data type, the second argument will be a string of length 1
+
+*/
+
+function strCount(str, letter) {
+  let count = 0;
+  for (let i = 0; i < str.length; i++) {    // str prasukam ir patikrinam
+    if (str[i] === letter) {      // jei randam letter
+      count++;      // suskaiciuojam, kiek yra letter
+    }
+  }
+  return count;      // grazinam letter skaiciu (jei nera tokios letter, grazinam 0)
+}
+console.log(strCount('Hello', 'o'));
+console.log(strCount('Hello', 'l'));
+console.log(strCount('', 'z'));
+
+// su .split
+function strCount(str, letter) {
+  return str.split(letter).length-1;
+}
+console.log(strCount('Hello', 'o'));
+console.log(strCount('Hello', 'l'));
+console.log(strCount('', 'z'));
+
+console.log("----------------");
+
+/*
+Task Overview:
+You have to write a function that accepts three parameters:
+
+cap is the amount of people the bus can hold excluding the driver.
+on is the number of people on the bus excluding the driver.
+wait is the number of people waiting to get on to the bus excluding the driver.
+If there is enough space, return 0, and if there isn't, return the number of passengers he can't take.
+
+Usage Examples:
+cap = 10, on = 5, wait = 5 --> 0 # He can fit all 5 passengers
+cap = 100, on = 60, wait = 50 --> 10 # He can't fit 10 of the 50 waiting
+*/
+
+function enough(cap, on, wait) {
+  if (on + wait <= cap) {
+    return 0;
+    } else {
+      return (on + wait) - cap;
+    }
+}
+console.log(enough(10, 5, 5));
+console.log(enough(100, 60, 50));
+console.log(enough(20, 5, 5));
+
+// ternary
+function enough(cap, on, wait) {
+  return (on + wait <= cap) ? 0 : on + wait - cap;
+}
